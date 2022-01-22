@@ -395,6 +395,73 @@
             </svg>
             </button>
             <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+            <!-- Форма заполнения личными даными -->
+            <form action="#">
+                <div class="form-field">
+                    <!-- Инпут с строкой имени -->
+                    <label class="input-text" for="user-name">Имя</label>
+                    <div class="input-field">
+                        <input 
+                            type="text"
+                            name="user-name"
+                            class="form-input"
+                            id="user-name"
+                            placeholder=""
+                            required
+                        >
+                        <svg class="input-icon" width="12" height="12">
+                            <use href="images/icons.svg#icon-vector-name"></use>
+                        </svg>
+                    </div>
+                    <!-- Инпут со строкой номера телефона -->
+                    <label class="input-text" for="user-tel">Телефон</label>
+                    <div class="input-field">
+                        <input 
+                            type="text"
+                            name="user-tel"
+                            class="form-input"
+                            id="user-tel"
+                            required
+                        >
+                        <svg class="input-icon" width="12" height="12">
+                            <use href="images/icons.svg#icon-vector-tel"></use>
+                        </svg>
+                    </div>
+                    <!-- Инпут со строкой почты -->
+                    <label class="input-text" for="user-mail">Почта</label>
+                    <div class="input-field">
+                        <input 
+                            type="text"
+                            name="user-mail"
+                            class="form-input"
+                            id="user-mail"
+                            required
+                        >
+                        <svg class="input-icon" width="12" height="12">
+                            <use href="images/icons.svg#icon-vector-mail"></use>
+                        </svg>
+                    </div>
+                    <!-- Инпут со строкой коментариев -->
+                    <label class="input-text" for="user-comment">Коментарий</label>
+                    <div class="input-field">
+                        <textarea 
+                            name="user-comment" 
+                            class="input-comment" 
+                            id="user-comment" 
+                            cols="30" 
+                            rows="10"
+                            placeholder="Введите текст"
+                        ></textarea>
+                    </div>
+                    <!-- Чекбокс с условиям пользования -->
+                    <div class="input-field">
+                        <input type="checkbox" name="checkbox" class="checkbox" required>
+                        <label class="check-text" for="checkbox">Соглашаюсь с рассылкой и принимаю <a href="" class="check-terms">Условия договора</a></label>
+                    </div>
+                    <!-- Кнопка отправки информации -->
+                    <button type="submit" class="modal-btn">Отправить</button>
+                </div>
+            </form>
         </div>
     </div>
     <script src="./js/modal.js"></script>
