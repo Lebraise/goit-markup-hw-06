@@ -810,3 +810,23 @@ button {
     pointer-events: none;
     visibility: hidden;
 }
+
+.modal-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    margin-top: 40px;
+    margin-bottom: 12px;
+}
+
+.order-form {
+    padding: 40px auto;
+}
+
+.order-input {
+    border: 1px solid black;
+    
+}
