@@ -383,11 +383,29 @@
                     </li>
                 </ul>
             </div>
+            <div class="footer-mailing">
+                <h2 class="icon-title">Подпишитесь на рассылку</h2>
+                <div class="mailing-wrap">
+                    <input 
+                    type="text"
+                    name="user-mail" 
+                    class="mailing-input"
+                    placeholder="E-mail"
+                    minlength="2"
+                    required
+                    >
+                    <button class="mailing-btn" type="submit">
+                        Подписаться
+                        <svg class="mailing-btn-icon" width="24" height="24">
+                            <use href="images/icons.svg#icon-icon-send"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
     </footer>
     <!-- Модальное окно -->
-    <!-- вернуть "is-hidden" в class на 390 -->
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="modal-close" data-modal-close>
             <svg class="modal-close-svg" width="11" height="11">
@@ -400,13 +418,13 @@
                 <div class="form-field">
                     <!-- Инпут с строкой имени -->
                     <label class="input-text" for="user-name">Имя</label>
-                    <div class="input-field">
+                    <div class="input-wrap">
                         <input 
                             type="text"
                             name="user-name"
                             class="form-input"
                             id="user-name"
-                            placeholder=""
+                            minlength="2"
                             required
                         >
                         <svg class="input-icon" width="12" height="12">
@@ -415,12 +433,13 @@
                     </div>
                     <!-- Инпут со строкой номера телефона -->
                     <label class="input-text" for="user-tel">Телефон</label>
-                    <div class="input-field">
+                    <div class="input-wrap">
                         <input 
                             type="text"
                             name="user-tel"
                             class="form-input"
                             id="user-tel"
+                            minlength="2"
                             required
                         >
                         <svg class="input-icon" width="12" height="12">
@@ -429,12 +448,13 @@
                     </div>
                     <!-- Инпут со строкой почты -->
                     <label class="input-text" for="user-mail">Почта</label>
-                    <div class="input-field">
+                    <div class="input-wrap">
                         <input 
                             type="text"
                             name="user-mail"
                             class="form-input"
                             id="user-mail"
+                            minlength="2"
                             required
                         >
                         <svg class="input-icon" width="12" height="12">
@@ -443,10 +463,10 @@
                     </div>
                     <!-- Инпут со строкой коментариев -->
                     <label class="input-text" for="user-comment">Коментарий</label>
-                    <div class="input-field">
+                    <div class="input-wrap">
                         <textarea 
                             name="user-comment" 
-                            class="input-comment" 
+                            class="input-comment form-input" 
                             id="user-comment" 
                             cols="30" 
                             rows="10"
@@ -454,9 +474,23 @@
                         ></textarea>
                     </div>
                     <!-- Чекбокс с условиям пользования -->
-                    <div class="input-field">
-                        <input type="checkbox" name="checkbox" class="checkbox" required>
-                        <label class="check-text" for="checkbox">Соглашаюсь с рассылкой и принимаю <a href="" class="check-terms">Условия договора</a></label>
+                    <div class="input-wrap">
+                        <input 
+                        type="checkbox" 
+                        name="check-text" 
+                        class="checkbox visually-hidden"
+                        id="policy"
+                        required
+                        >
+                        <label class="check-text" for="policy">
+                            <span>
+                                <svg class="check-icon" width="16" height="15">
+                                    <use href="images/icons.svg#icon-vector-check"></use>
+                                </svg>
+                            </span>
+                            Соглашаюсь с рассылкой и принимаю<a href="" class="check-terms">Условия договора</a>
+                        </label>
+
                     </div>
                     <!-- Кнопка отправки информации -->
                     <button type="submit" class="modal-btn">Отправить</button>

@@ -48,6 +48,19 @@ button {
     padding-bottom: 94px;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
 
 /* -------------Стилизация Header------------- */
 
@@ -615,6 +628,55 @@ button {
     margin-bottom: 9px;
 }
 
+.footer-mailing {
+    padding-top: 15px;
+    margin-left: 93px;
+}
+
+.mailing-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.mailing-input {
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: #2F303A;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+    color: #ffffff;
+}
+
+.mailing-btn {
+    width: 200px;
+    height: 50px;
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto",sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.87;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    margin-left: 12px;
+}
+
+.mailing-btn-icon {
+    fill: #ffffff;
+    margin-left: 10px;
+}
+
 /* ----------Стилизация портфолио---------- */
 
 /* -- Фильтры -- */
@@ -803,6 +865,11 @@ button {
     position: absolute;
     top: 8px;
     right: 8px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close:hover, .modal-close:focus {
+    fill: var(--main-color);
 }
 
 .is-hidden {
@@ -837,18 +904,18 @@ button {
     color: #757575;
 }
 
-.input-field {
+.input-wrap {
     position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .input-icon {
+    display: block;
     position: absolute;
     left: 12px;
     top: 50%;
     transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input {
@@ -858,13 +925,19 @@ button {
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-field:focus {
-    color: #2196F3;
+.form-input:hover, .form-input:focus {
+    outline: none;
     border: 1px solid #2196F3;
     box-sizing: border-box;
     border-radius: 4px;
+}
+
+.form-input:hover+.input-icon,
+.form-input:focus+.input-icon {
+    fill: #2196F3;
 }
 
 .input-comment {
@@ -902,23 +975,47 @@ button {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: #757575;
+    display: flex;
+    align-items: center;
 }
 
 .check-terms {
     text-decoration-line: underline;
     color: #2196F3;
+    margin-left: 3px;
 }
 
-.checkbox {
-    width: 16px;
+.check-text span {
+    width: 15px;
     height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-right: 7px;
+    border: 2px solid #212121;
+    border-radius: 2px;;
 }
+
+.check-icon {
+    fill: transparent;
+}
+
+.checkbox:checked + .check-text span {
+    border: none;
+    background-color: #2196F3;
+}
+
+.checkbox:checked + .check-text .check-icon {
+    border: none;
+    fill: #ffffff;
+}
+
+
 
 /* Стилизация кнопки модалки - "Отправить" */
 
 .modal-btn {
-    font-family: Roboto;
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
