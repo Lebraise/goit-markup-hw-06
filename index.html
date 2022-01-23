@@ -386,25 +386,28 @@
                 </ul>
             </div>
             <!-- Инпут с кнопкой для подписки -->
-            <div class="footer-mailing">
-                <h2 class="icon-title">Подпишитесь на рассылку</h2>
+            <form action="#">
                 <div class="mailing-wrap">
-                    <input 
-                    type="text"
-                    name="user-mail" 
-                    class="mailing-input"
-                    placeholder="E-mail"
-                    minlength="2"
-                    required
-                    >
-                    <button class="mailing-btn" type="submit">
-                        Подписаться
-                        <svg class="mailing-btn-icon" width="24" height="24">
-                            <use href="images/icons.svg#icon-icon-send"></use>
-                        </svg>
-                    </button>
+                    <label class="icon-title" for="footer-mailing">Подпишитесь на рассылку</label>
+                    <div class="mailing-input-box">
+                        <input 
+                            type="text"
+                            name="user-mail" 
+                            class="mailing-input"
+                            placeholder="E-mail"
+                            minlength="2"
+                            id="footer-mailing"
+                            required
+                        >
+                        <button class="mailing-btn" type="submit">
+                            Подписаться
+                            <svg class="mailing-btn-icon" width="24" height="24">
+                                <use href="images/icons.svg#icon-icon-send"></use>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
     </footer>
     <!-- Модальное окно -->
